@@ -1,1 +1,178 @@
-<h1>Hello, nothing to see here.</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Portfolio Sidney Bernardin</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- Scripts -->
+  <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+
+    <div class="left">
+
+      <div class="logo">Sidney Bernardin</div>
+      <div class="lang">back-end dev</div>
+
+      <div class="carousel">
+
+        <div class="track">
+          <div class="slide s1 active">
+            <div class="view-btn p1">View Project</div>
+            <div class="title">
+              destiny 2<br />
+              google home action
+            </div>
+            <div class="img"></div>
+          </div>
+
+          <div class="slide s2">
+            <div class="title">Recipe Share</div>
+            <div class="img"></div>
+            <div class="view-btn p2">View Project</div>
+          </div>
+
+          <div class="slide s3">
+            <div class="title">
+              Bungo<br>
+              (a Bungie API SDK)
+            </div>
+            <div class="img"></div>
+            <div class="view-btn p3">View Project</div>
+          </div>
+       </div>
+
+        <button href="#" class="up-btn is-hidden">
+          <ion-icon name="arrow-up-outline"></ion-icon>
+        </button>
+
+        <button href="#" class="down-btn">
+          <ion-icon name="arrow-down-outline"></ion-icon>
+        </button>
+
+        <div class="nav">
+          <button class="dot d1 active"></button>
+          <button class="dot d2"></button>
+          <button class="dot d3"></button>
+        </div>
+      </div>
+
+      <a href="http://sidney.bernardin@gmail.com" class="bottom-text" target="_blank">/contact me</a>
+      <div class="social-media">
+        <ul>
+          <li>
+            <a href="https://github.com/Sidney-Bernardin" target="_blank">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="right">
+
+      <div class="img"></div>
+      <div class="overlay"></div>
+
+      <div class="projects">
+        <div class="project p1">
+          <h2>destiny 2 google home action</h2>
+
+          <a class="source" href="https://github.com/Sidney-Bernardin/Destiny-Home" target="_blank">
+            /Source Code
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
+          
+          <h3>Description</h3>
+          <div class="short">
+            <p>My Google Home action is a Destiny Item Manager (DIM) that I created with Actions on Google. A Destiny Item Manager can do things like move and equip item within the game of Destiny.</p>
+          </div>
+
+          <h3>Technologies</h3>
+          <ul>
+            <li><strong>Go:</strong> Go is what I wrote the webhook in and I made great use of golangs concurrency featurs.</li>
+            <li><strong>Datastore:</strong> I chose Datastore for my database because its a noSQL db and its very easy to implement when it comes to a GCF.</li>
+            <li><strong>Google Cloud Functions:</strong> Deploying on GCF makes for very easy scalability.</li>
+            <li><strong>Google Home Actions:</strong> The action is what makes requests to the golang webhook thats hosted on GCF.</li>
+          </ul>
+
+          <h3>Architecture</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo deleniti ducimus ipsam error. Voluptatem veniam enim nihil atque quisquam alias?</p>
+
+          <h3>Demo</h3>
+          <div class="vid">
+            <iframe src="https://www.youtube.com/embed/AVmXYsVYa-E"></iframe>
+          </div>
+        </div>
+
+        <div class="project p2">
+          <h2>Recipe Share</h2>
+
+          <!--a class="source" href="https://github.com/Sidney-Bernardin" target="_blank">
+            /Source Code
+            <ion-icon name="logo-github"></ion-icon>
+          </a-->
+          
+          <h3>Description</h3>
+          <div class="short">
+            <p>This is a full stack application that allows people to post and share recipes.</p>
+          </div>
+
+          <h3>Technologies</h3>
+          <ul>
+            <li><strong>Go:</strong> Go is what I used for the hexagonal based backend.</li>
+            <li><strong>MongoDB:</strong> I chose MongoDB because a fast noSQL database suited well for my use case.</li>
+            <li><strong>VueJS</strong> I chose VueJS to do the frontend in simply because thats my favotite frontend framework.</li>
+            <li><strong>Cloud Run:</strong> I deployed this application on Cloud Run but the code-base makes it very easy to doploy many ways.</li>
+          </ul>
+
+          <h3>Architecture</h3>
+          <p>I went with a Hexagonal based backend because its testability combined with its simplicity makes for a great development experience.</p>
+
+          <!--h3>Demo</h3>
+          <div class="vid">
+            <iframe src="https://www.youtube.com/embed/AVmXYsVYa-E"></iframe>
+          </div-->
+        </div>
+
+        <div class="project p3">
+          <h2>Bungo</h2>
+
+          <a class="source" href="https://github.com/Sidney-Bernardin/bungo" target="_blank">
+            /Source Code
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
+          
+          <h3>Description</h3>
+          <div class="short">
+            <p>Bungo is a Golang SDK that interacts with the Bungie NET API.<br>
+            The reasen I made this is because I needed a better way to interact with the Bungie NET API in my destiny webhook project.</p>
+          </div>
+
+          <h3>Technologies</h3>
+          <ul>
+            <li><strong>Go:</strong> Go is what I wrote the webhook in and I made great use of golangs concurrency featurs.</li>
+          </ul>
+
+          <h3>Architecture</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo deleniti ducimus ipsam error. Voluptatem veniam enim nihil atque quisquam alias?</p>
+        </div>
+      </div>
+
+      <a href="#" class="bottom-text">/resume</a>
+    </div>
+
+  <script type="text/javascript" src="carousel.js"></script>
+  <script type="text/javascript" src="projects.js"></script>
+</body>
+</html>
