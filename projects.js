@@ -5,6 +5,7 @@ const hideProjects = () => {
   eachProject.forEach((project, index) => {
     project.style.display = 'none'
   })
+  window.scrollBy(0, window.innerHeight)
 }
 
 const updateProject = (index) => {
