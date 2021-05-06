@@ -1,178 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Portfolio Sidney Bernardin</title>
+    <title>Sidney Bernardin</title>
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="style.css">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-  <!-- Scripts -->
-  <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+    <!-- Scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
 </head>
+
 <body>
+    <div class="slide active">
+        <div class="card">
+            <div class="card-img" id="img1"></div>
+            <div class="card-content">
+                <p class="card-num">[ 1 / 4 ]</p>
 
-    <div class="left">
+                <p class="card-theme">Hello, World!</p>
 
-      <div class="logo">Sidney Bernardin</div>
-      <div class="lang">back-end dev</div>
+                <p class="card-theme">I'm
+                    <strong class="card-header">Sidney Bernardin</strong>.
+                </p>
 
-      <div class="carousel">
-
-        <div class="track">
-          <div class="slide s1 active">
-            <div class="view-btn p1">View Project</div>
-            <div class="title">
-              destiny 2<br />
-              google home action
+                <p class="card-para">I'm a <strong>great</strong> backend-developer. I have years of experience creating
+                    and
+                    maintaining serverles
+                    applications with languages and tools like <strong>Golang</strong>, <strong>MongoDB</strong>,
+                    <strong>MySQL</strong>, <strong>Docker</strong>, <strong>Google Cloud Platform</strong>, and more.
+                </p>
+                <a class="card-link">Contact Me</a>
             </div>
-            <div class="img"></div>
-          </div>
-
-          <div class="slide s2">
-            <div class="title">Recipe Share</div>
-            <div class="img"></div>
-            <div class="view-btn p2">View Project</div>
-          </div>
-
-          <div class="slide s3">
-            <div class="title">
-              Bungo<br>
-              (a Bungie API SDK)
-            </div>
-            <div class="img"></div>
-            <div class="view-btn p3">View Project</div>
-          </div>
-       </div>
-
-        <button href="#" class="up-btn is-hidden">
-          <ion-icon name="arrow-up-outline"></ion-icon>
-        </button>
-
-        <button href="#" class="down-btn">
-          <ion-icon name="arrow-down-outline"></ion-icon>
-        </button>
-
-        <div class="nav">
-          <button class="dot d1 active"></button>
-          <button class="dot d2"></button>
-          <button class="dot d3"></button>
         </div>
-      </div>
+    </div>
+    <div class="slide">
+        <div class="card">
+            <div class="card-img" id="img2"></div>
+            <div class="card-content">
+                <p class="card-num">[ 2 / 4 ]</p>
+                <p class="card-theme">Project 1</p>
+                <h2 class="card-header">Destiny2 Webhook For GoogleHome</h2>
+                <p class="card-para">A Destiny Item Manager (DIM) that I created with Actions
+                    on Google. A Destiny Item Manager can do things like move and equip items within the game of
+                    Destiny2.
+                </p>
+                <h3 class="card-header-h3">Technologies</h3>
+                <ul>
+                    <li class="card-para"><strong>Golang:</strong> Go is what I wrote the <strong>webhook </strong> in.
+                        I made great
+                        use of
+                        golangs
+                        <strong>concurrency </strong> featurs to reduce latency.
+                    </li>
+                    <li class="card-para"><strong>Datastore:</strong> I chose Datastore for my database because its
+                        very easy to implement when using other GCP tools.</li>
+                    <li class="card-para"><strong>Google Cloud Functions:</strong> Deploying to GCF makes for very easy
+                        <strong>maintaining </strong> and <strong>scalability</strong> .
+                    </li>
+                    <li class="card-para"><strong>Google Home Actions:</strong> The action is what makes requests to the
+                        golang webhook.</li>
+                </ul>
 
-      <a href="http://sidney.bernardin@gmail.com" class="bottom-text" target="_blank">/contact me</a>
-      <div class="social-media">
+                <a href="https://github.com/Sidney-Bernardin/Destiny2-Webhook-For-GoogleHome" class="card-link">View
+                    Code</a>
+            </div>
+        </div>
+    </div>
+    <div class="slide">
+        <div class="card">
+            <div class="card-img" id="img3"></div>
+            <div class="card-content">
+                <p class="card-num">[ 3 / 4 ]</p>
+                <p class="card-theme">Project 2</p>
+                <h2 class="card-header">Recipe Share</h2>
+                <p class="card-para">This is a <strong>fullstack</strong>, <strong>mivroservice </strong> based
+                    application that allows
+                    people to post and
+                    share recipes.</p>
+                <h3 class="card-header-h3">Technologies</h3>
+                <ul>
+                    <li class="card-para"><strong>Go:</strong> Go is what I used for the <strong>hexagonal </strong>
+                        based backend services.</li>
+                    <li class="card-para"><strong>MongoDB:</strong> I chose MongoDB because its a fast noSQL database
+                        that
+                        suited
+                        well for my use
+                        case.</li>
+                    <li class="card-para"><strong>VueJS:</strong> I chose VueJS to do the <strong>UI </strong> simply
+                        because
+                        thats my favotite
+                        frontend framework.</li>
+                    <li class="card-para"><strong>Cloud Run:</strong> I didn't have all that many <strong>mivroservices
+                        </strong> to
+                        deploy
+                        witch made deploying to <strong>Google Cloud Run</strong> an great choice.</li>
+                </ul>
+
+                <h3 class="card-header-h3">Architecture</h3>
+                <p class=" card-para">I went with multiple <strong>hexagonal</strong> based
+                    <strong>mivroservices</strong> for the
+                    backend.
+                    <strong>hexagonal</strong>
+                    services
+                    make for great <strong>testability</strong>.
+                </p>
+                <!--a class="card-link">View Code</a-->
+            </div>
+        </div>
+    </div>
+    <div class="slide">
+        <div class="card">
+            <div class="card-img" id="img4"></div>
+            <div class="card-content">
+                <p class="card-num">[ 4 / 4 ]</p>
+                <p class="card-theme">Project 3</p>
+                <h2 class="card-header">bungo</h2>
+                <p class="card-para">This is a bungie.net API SDK for Golang. It provides access to the Bungie.net API.
+                    The reasen I made this is because I needed a better way to interact with the Bungie.NET API in my
+                    destiny webhook project
+                </p>
+                <h3 class="card-header-h3">Technologies</h3>
+                <ul>
+                    <li class="card-para"><strong>Go:</strong> Large <strong>data-structures</strong> came up a lot in
+                        this project, and
+                        Golang handled then great.</li>
+                </ul>
+                <h3 class="card-header-h3">Architecture</h3>
+                <p class="card-para">I went with a code scructure very similer to Googles Youtube API.</p>
+                <a href="https://github.com/Sidney-Bernardin/bungo" class="card-link">Read</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="prevnext">
+        <button class="pn-btn" id="prev"></button>
+        <button class="pn-btn" id="next"></button>
+    </div>
+
+    <div class="social">
         <ul>
-          <li>
-            <a href="https://github.com/Sidney-Bernardin" target="_blank">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
+            <li>
+                <a href="#">
+                    <ion-icon name="mail-outline"></ion-icon>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Sidney-Bernardin">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+            </li>
         </ul>
-      </div>
     </div>
 
-    <div class="right">
-
-      <div class="img"></div>
-      <div class="overlay"></div>
-
-      <div class="projects">
-        <div class="project p1">
-          <h2>destiny 2 google home action</h2>
-
-          <a class="source" href="https://github.com/Sidney-Bernardin/Destiny-Home" target="_blank">
-            <ion-icon name="logo-github"></ion-icon>
-            /Source Code
-          </a>
-          
-          <h3>Description</h3>
-          <div class="short">
-            <p>My Google Home action is a Destiny Item Manager (DIM) that I created with Actions on Google. A Destiny Item Manager can do things like move and equip item within the game of Destiny.</p>
-          </div>
-
-          <h3>Technologies</h3>
-          <ul>
-            <li><strong>Go:</strong> Go is what I wrote the webhook in and I made great use of golangs concurrency featurs.</li>
-            <li><strong>Datastore:</strong> I chose Datastore for my database because its a noSQL db and its very easy to implement when it comes to a GCF.</li>
-            <li><strong>Google Cloud Functions:</strong> Deploying on GCF makes for very easy scalability.</li>
-            <li><strong>Google Home Actions:</strong> The action is what makes requests to the golang webhook thats hosted on GCF.</li>
-          </ul>
-
-          <h3>Architecture</h3>
-          <!--p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo deleniti ducimus ipsam error. Voluptatem veniam enim nihil atque quisquam alias?</p-->
-
-          <h3>Demo</h3>
-          <div class="vid">
-            <iframe src="https://www.youtube.com/embed/AVmXYsVYa-E"></iframe>
-          </div>
-        </div>
-
-        <div class="project p2">
-          <h2>Recipe Share</h2>
-
-          <!--a class="source" href="https://github.com/Sidney-Bernardin" target="_blank">
-            /Source Code
-            <ion-icon name="logo-github"></ion-icon>
-          </a-->
-          
-          <h3>Description</h3>
-          <div class="short">
-            <p>This is a full stack application that allows people to post and share recipes.</p>
-          </div>
-
-          <h3>Technologies</h3>
-          <ul>
-            <li><strong>Go:</strong> Go is what I used for the hexagonal based backend.</li>
-            <li><strong>MongoDB:</strong> I chose MongoDB because a fast noSQL database suited well for my use case.</li>
-            <li><strong>VueJS</strong> I chose VueJS to do the frontend in simply because thats my favotite frontend framework.</li>
-            <li><strong>Cloud Run:</strong> I deployed this application on Cloud Run but the code-base makes it very easy to doploy many ways.</li>
-          </ul>
-
-          <h3>Architecture</h3>
-          <p>I went with a Hexagonal based backend because its testability combined with its simplicity makes for a great development experience.</p>
-
-          <!--h3>Demo</h3>
-          <div class="vid">
-            <iframe src="https://www.youtube.com/embed/AVmXYsVYa-E"></iframe>
-          </div-->
-        </div>
-
-        <div class="project p3">
-          <h2>Bungo</h2>
-
-          <a class="source" href="https://github.com/Sidney-Bernardin/bungo" target="_blank">
-            /Source Code
-            <ion-icon name="logo-github"></ion-icon>
-          </a>
-          
-          <h3>Description</h3>
-          <div class="short">
-            <p>Bungo is a Golang SDK that interacts with the Bungie NET API.<br>
-            The reasen I made this is because I needed a better way to interact with the Bungie NET API in my destiny webhook project.</p>
-          </div>
-
-          <h3>Technologies</h3>
-          <ul>
-            <li><strong>Go:</strong> Go is what I wrote the webhook in and I made great use of golangs concurrency featurs.</li>
-          </ul>
-
-          <h3>Architecture</h3>
-          <p>The way that I structured this code-base was hevely influenced by some of Googles SDKs. Like their YoutubeAPI SDK.</p>
-        </div>
-      </div>
-
-      <a href="#" class="bottom-text">/resume</a>
-    </div>
-
-  <script type="text/javascript" src="carousel.js"></script>
-  <script type="text/javascript" src="projects.js"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>
