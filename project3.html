@@ -20,8 +20,9 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i"
         rel="stylesheet">
 
-    <!-- terminal effect -->
-    <script src="t.min.js"></script>
+    <!-- ionicons cdn -->
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+
 
     <!-- for on scroll animations -->
     <link rel="stylesheet" href="animate.css">
@@ -55,68 +56,100 @@
             <div class="close-btn">close</div>
 
             <ul id="menu">
-                <li><a href="index.html">home<span>.</span></a></li>
-                <li><a href="work.html">projects<span>.</span></a></li>
-                <li><a href="about.html">about me<span>.</span></a></li>
-                <li><a href="contact.html">contact<span>.</span></a></li>
+                <li><a href="index.html">home<span> >></span></a></li>
+                <li><a href="work.html">projects<span> >></span></a></li>
+                <li><a href="about.html">about me<span> >></span></a></li>
+                <li><a href="contact.html">contact<span> >></span></a></li>
             </ul>
         </div>
+
         <!--------------- navbar ends here --------------->
 
-
+        <div class="whitespace"></div>
 
         <!--------------- hero section starts here --------------->
-        <div class="hero">
-            <div class="header">
-                <h1 class="line anim-typewriter">I make maintainable backends.</h1>
+        <div class="container">
+            <div class="hero-content">
+                <br><br>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <br>
+
+                        <h1 class="wow fadeInUp" data-wow-delay="1s">bungo
+                        </h1><br><br>
+
+                        <br>
+                        <p class="wow fadeInUp" data-wow-delay="1.8s">This is a bungie.net API SDK for Golang. It
+                            provides access to the Bungie.net API.
+                            The reasen I made this is because I needed a better way to interact with the Bungie.NET API
+                            in my
+                            destiny webhook project</p>
+                        <h3 class="wow fadeInUp card-header-h3" data-wow-delay="1s">Technologies</h3>
+                        <ul>
+                            <li data-wow-delay="1.8s" class="wow fadeInUp card-para"><strong>Go:</strong> Large
+                                <strong>data-structures</strong> came up a
+                                lot in
+                                this project, and
+                                Golang handled them great.
+                            </li>
+                        </ul>
+
+                        <h3 class="wow fadeInUp card-header-h3" data-wow-delay="1s">Architecture</h3>
+                        <p data-wow-delay="1.8s" class="wow fadeInUp card-para">I went with a code scructure very
+                            similer to Googles Youtube
+                            API.</p>
+
+                        <a href="https://github.com/Sidney-Bernardin/Destiny2-Webhook-For-GoogleHome" class="view-code">
+                            View Code >>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="scroll-down"></div>
         <!--------------- hero section ends here --------------->
 
 
+        <!--------------- project image section starts here --------------->
 
-        <!--------------- projects section starts here --------------->
-        <div class="container-fluid">
-            <br><br><br>
-
-            <h6>Selected projects</h6>
-
-            <div class="vertical"></div>
-            <br>
-
-            <div class="whitespace"></div>
-            <div class="whitespace"></div>
-
-            <div class="row">
-                <div class="col-lg-8"></div>
-
-                <div class="col-lg-4 project project1 wow fadeInUp" onclick="location.href='project1.html'"></div>
+        <!--div class="project-img">
+            <div class="container">
+                <br><br>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="project image wow fadeInUp" data-wow-delay="0.8s"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="project image wow fadeInUp" data-wow-delay="0.8s"></div>
+                    </div>
+                </div>
             </div>
+        </div-->
 
-            <div class="whitespace"></div>
+        <!--------------- project image section ends here --------------->
 
-            <div class="row">
-                <div class="col-lg-6 project project2 wow fadeInUp" onclick="location.href='project2.html'"></div>
+        <br><br>
 
-                <div class="col-lg-6"></div>
+        <!--------------- project nav starts here --------------->
+
+        <!--div class="project-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 prev">
+                        <p>
+                            <ion-icon name="arrow-back"></ion-icon>previous
+                        </p>
+                    </div>
+                    <div class="col-lg-6 next">
+                        <p>next<ion-icon name="arrow-forward"></ion-icon>
+                        </p>
+                    </div>
+                </div>
             </div>
+        </div-->
 
-            <div class="whitespace"></div>
+        <!--------------- project nav starts here --------------->
 
-            <div class="row">
-                <div class="col-lg-7"></div>
-
-                <div class="col-lg-4 project project3 wow fadeInUp" onclick="location.href='project3.html'"></div>
-
-                <div class="col-lg-1"></div>
-            </div>
-
-            <div class="whitespace"></div>
-        </div>
-        <!--------------- projects section ends here --------------->
-
+        <div class="whitespace"></div>
 
 
         <!--------------- footer starts here --------------->
@@ -184,7 +217,6 @@
     <script type="text/javascript">
 
         // navigation starts here
-
         $("#toggle").click(function () {
             $(this).toggleClass('on');
             $("#resize").toggleClass("active");
@@ -219,7 +251,10 @@
 
         // nav animation ends
 
+
+
         new WOW().init();
+
 
     </script>
 </body>

@@ -20,8 +20,9 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i"
         rel="stylesheet">
 
-    <!-- terminal effect -->
-    <script src="t.min.js"></script>
+    <!-- ionicons cdn -->
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+
 
     <!-- for on scroll animations -->
     <link rel="stylesheet" href="animate.css">
@@ -55,68 +56,126 @@
             <div class="close-btn">close</div>
 
             <ul id="menu">
-                <li><a href="index.html">home<span>.</span></a></li>
-                <li><a href="work.html">projects<span>.</span></a></li>
-                <li><a href="about.html">about me<span>.</span></a></li>
-                <li><a href="contact.html">contact<span>.</span></a></li>
+                <li><a href="index.html">home<span> >></span></a></li>
+                <li><a href="work.html">projects<span> >></span></a></li>
+                <li><a href="about.html">about me<span> >></span></a></li>
+                <li><a href="contact.html">contact<span> >></span></a></li>
             </ul>
         </div>
+
         <!--------------- navbar ends here --------------->
 
-
+        <div class="whitespace"></div>
 
         <!--------------- hero section starts here --------------->
-        <div class="hero">
-            <div class="header">
-                <h1 class="line anim-typewriter">I make maintainable backends.</h1>
+        <div class="container">
+            <div class="hero-content">
+                <br><br>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <br>
+
+                        <h1 class="wow fadeInUp" data-wow-delay="1s">Recipe Share
+                        </h1><br><br>
+
+                        <br>
+                        <p class="wow fadeInUp" data-wow-delay="1.8s">This is a <strong>fullstack</strong>,
+                            <strong>mivroservice </strong> based
+                            application that allows
+                            people to post and
+                            share recipes.
+                        </p>
+                        <h3 class="wow fadeInUp card-header-h3" data-wow-delay="1s">Technologies</h3>
+                        <ul>
+                            <li class="wow fadeInUp" data-wow-delay="1.8s" class="wow fadeInUp"><strong>Go:</strong> Go
+                                is what I used for the <strong>hexagonal
+                                </strong>
+                                based backend services.</li>
+                            <li class="wow fadeInUp" data-wow-delay="1.8s" class="wow fadeInUp">
+                                <strong>MongoDB:</strong> I chose MongoDB because its a fast noSQL
+                                database
+                                that
+                                suited
+                                well for my use
+                                case.
+                            </li>
+                            <li class="wow fadeInUp" data-wow-delay="1.8s" class="wow fadeInUp"><strong>VueJS:</strong>
+                                I chose VueJS to do the <strong>UI
+                                </strong>
+                                simply
+                                because
+                                thats my favotite
+                                frontend framework.</li>
+                            <li class="wow fadeInUp" data-wow-delay="1.8s"><strong>Cloud Run:</strong> I didn't have all
+                                that many
+                                <strong>mivroservices
+                                </strong> to
+                                deploy
+                                witch made deploying to <strong>Google Cloud Run</strong> an great choice.
+                            </li>
+                        </ul>
+
+                        <h3 data-wow-delay="1s" class="wow fadeInUp card-header-h3">Architecture</h3>
+                        <p data-wow-delay="1.8s" class="wow fadeInUp">I went with multiple <strong>hexagonal</strong>
+                            based
+                            <strong>mivroservices</strong> for the
+                            backend.
+                            <strong>hexagonal</strong>
+                            services
+                            make for great <strong>testability</strong>.
+                        </p>
+
+                        <!--a href="https://github.com/Sidney-Bernardin/Destiny2-Webhook-For-GoogleHome" class="view-code">
+                            View Code >>
+                        </a-->
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="scroll-down"></div>
         <!--------------- hero section ends here --------------->
 
 
+        <!--------------- project image section starts here --------------->
 
-        <!--------------- projects section starts here --------------->
-        <div class="container-fluid">
-            <br><br><br>
-
-            <h6>Selected projects</h6>
-
-            <div class="vertical"></div>
-            <br>
-
-            <div class="whitespace"></div>
-            <div class="whitespace"></div>
-
-            <div class="row">
-                <div class="col-lg-8"></div>
-
-                <div class="col-lg-4 project project1 wow fadeInUp" onclick="location.href='project1.html'"></div>
+        <!--div class="project-img">
+            <div class="container">
+                <br><br>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="project image wow fadeInUp" data-wow-delay="0.8s"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="project image wow fadeInUp" data-wow-delay="0.8s"></div>
+                    </div>
+                </div>
             </div>
+        </div-->
 
-            <div class="whitespace"></div>
+        <!--------------- project image section ends here --------------->
 
-            <div class="row">
-                <div class="col-lg-6 project project2 wow fadeInUp" onclick="location.href='project2.html'"></div>
+        <br><br>
 
-                <div class="col-lg-6"></div>
+        <!--------------- project nav starts here --------------->
+
+        <!--div class="project-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 prev">
+                        <p>
+                            <ion-icon name="arrow-back"></ion-icon>previous
+                        </p>
+                    </div>
+                    <div class="col-lg-6 next">
+                        <p>next<ion-icon name="arrow-forward"></ion-icon>
+                        </p>
+                    </div>
+                </div>
             </div>
+        </div-->
 
-            <div class="whitespace"></div>
+        <!--------------- project nav starts here --------------->
 
-            <div class="row">
-                <div class="col-lg-7"></div>
-
-                <div class="col-lg-4 project project3 wow fadeInUp" onclick="location.href='project3.html'"></div>
-
-                <div class="col-lg-1"></div>
-            </div>
-
-            <div class="whitespace"></div>
-        </div>
-        <!--------------- projects section ends here --------------->
-
+        <div class="whitespace"></div>
 
 
         <!--------------- footer starts here --------------->
@@ -184,7 +243,6 @@
     <script type="text/javascript">
 
         // navigation starts here
-
         $("#toggle").click(function () {
             $(this).toggleClass('on');
             $("#resize").toggleClass("active");
@@ -219,7 +277,10 @@
 
         // nav animation ends
 
+
+
         new WOW().init();
+
 
     </script>
 </body>
