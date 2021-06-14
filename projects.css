@@ -1,0 +1,83 @@
+header .img {
+    width: 75%;
+    height: 200px;
+    margin: 0 auto;
+    background: url("./img/bungie.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    width: 85%;
+    margin: 100px auto;
+    margin-bottom: 200px;
+}
+
+.description {
+    display: inline-block;
+    width: 45%;
+}
+
+.examples {
+    display: inline-block;
+    float: right;
+    width: 45%;
+}
+
+.examples .img {
+    width: 100%;
+    height: 250px;
+    background: #c1c1c1;
+}
+
+.img h1 {
+    float: right;
+    margin: 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.75);
+    padding: 0 10px;
+    background: rgba(0, 0, 0, 0.5);
+    width: 50%;
+}
+
+.p1 .img {
+    background: url("./img/bungoexample.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 350px;
+}
+
+.code {
+    color: gray;
+}
+
+@media(max-width: 800px) {
+    .content  {
+        height: 100%;
+        margin-bottom: 0;
+    }
+
+    .description {
+        display: block;
+        float: left;
+        margin: 10px auto;
+        padding: 0;
+        width: 100%;
+    }
+
+    .examples {
+        display: block;
+        float: left;
+        margin: 10px auto;
+        padding: 0;
+        width: 100%;
+        height: 400px;
+    }
+
+    .p1 .img {
+        margin-top: 50px;
+        height: 282px;
+    }
+}
