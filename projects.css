@@ -1,4 +1,4 @@
-header .img {
+.header1 .img {
     width: 75%;
     height: 200px;
     margin: 0 auto;
@@ -8,10 +8,26 @@ header .img {
     background-size: cover;
 }
 
-.content {
+.header2 .img {
+    width: 75%;
+    height: 200px;
+    margin: 0 auto;
+    background: url("./img/gomongo.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content-p1 {
     width: 85%;
     margin: 100px auto;
     margin-bottom: 200px;
+}
+
+.content-p2 {
+    width: 85%;
+    margin: 100px auto;
+    margin-bottom: 400px;
 }
 
 .description {
@@ -49,14 +65,27 @@ header .img {
     height: 350px;
 }
 
+.p2 .img {
+    background: url("./img/posts.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 654px;
+}
+
 .code {
     color: gray;
 }
 
 @media(max-width: 800px) {
-    .content  {
+    .content-p1  {
         height: 100%;
         margin-bottom: 0;
+    }
+
+    .content-p2  {
+        height: 100%;
+        margin-bottom: 100px;
     }
 
     .description {

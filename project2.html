@@ -9,6 +9,7 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="projects.css">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i"
@@ -16,7 +17,8 @@
 </head>
 
 <body>
-  <!----- Navbar ------>
+
+  <!-- Navbar -->
   <nav>
     <ul>
       <li><a class="active" href="index.html">Projects</a></li>
@@ -27,29 +29,30 @@
     </ul>
   </nav>
 
-  <!----- Header ------>
-  <header>
-    <article>
-      <h1>Hello, im Sidney Bernardin !</h1>
-      <p>I make fast & maintainable backend services.</p>
-    </article>
+  <!-- Header -->
+  <header class="header2">
+    <p>REST API, Golang, MongoDB</p>
+    <div class="img"></div>
   </header>
 
-  <!------ Projects ------>
-  <h2>Projects</h2>
-  <div class="projects">
-    <div class="project p1">
-      <p>Golang SDK</p>
-      <div class="img"></div>
-      <h2>Bungo</h2>
-      <a href="project1.html">More -></a>
+  <!-- Main stuff. -->
+  <div class="content-p2">
+    <div class="description">
+      <h1>Image Gallery API</h1>
+      <a href="https://github.com/Sidney-Bernardin/bungo" class="code">View Code -></a>
+
+      <p>This API uses basic CRUD operations to store and retreve posts. These posts contain images as there thumbnails.
+      </p>
+
+      The code architecture is very straight forword and easy to read. Is project has a fully tested http server and the
+      project is
+      dockerized for ease of use.
     </div>
 
-    <div class="project p2">
-      <p>REST API, Golang, MongoDB</p>
-      <div class="img"></div>
-      <h2>Image Gallery API</h2>
-      <a href="project2.html">More -></a>
+    <div class="examples p2">
+      <div class="img">
+        <h1>Example</h1>
+      </div>
     </div>
   </div>
 
