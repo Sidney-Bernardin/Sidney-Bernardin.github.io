@@ -1,0 +1,322 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "sans-serif";
+  background: #0f0f0f;
+  color: #fff;
+}
+
+ion-icon {
+  vertical-align: bottom;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  background: transparent;
+  text-decoration: underline;
+}
+
+/* === Navbar === */
+nav {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  font-size: 2rem;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+
+nav a {
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* === Footer === */
+footer {
+  position: fixed;
+  display: flex;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer div {
+  display: flex;
+  gap: 1rem;
+}
+
+footer a {
+  color: #fff;
+  font-size: 2rem;
+}
+
+/* === Hero === */
+.hero {
+  position: absolute;
+  display: inline-block;
+  top: calc(6rem);
+  left: 50%;
+}
+
+.hero h1 {
+  width: 100%;
+  border-right: 1rem solid #333333;
+  color: #333333;
+  font-family: monospace;
+  font-weight: lighter;
+  overflow: hidden;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  animation:
+    grow 2s steps(39),
+    cursor_blink 1s step-end infinite;
+}
+
+@keyframes cursor_blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes grow {
+  from {
+    width: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero {
+    display: none;
+  }
+}
+
+/* === Tab Container === */
+.tab-container {
+  position: absolute;
+  top: 40vh;
+  left: 0;
+  width: 50%;
+  padding: 0.5rem;
+  margin: 0;
+}
+
+.tab-container .tab-btns {
+  display: flex;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding-top: 1rem;
+  justify-content: space-around;
+}
+
+.tab-container .tab-btns button {
+  padding-bottom: 0.5rem;
+  text-decoration: none;
+  flex: 1;
+  transition: 0.2s;
+  border-bottom: 1px solid transparent;
+}
+
+.tab-container .tab-btns button.active {
+  border-bottom: 1px solid #fff;
+}
+
+.tab-container .page {
+  width: 100%;
+  height: calc(60vh - 3rem - 6rem);
+  overflow: auto;
+}
+
+@media (max-width: 900px) {
+  .tab-container {
+    width: 100%;
+  }
+}
+
+/* === Contact === */
+.tab-container .page.contact {
+  display: flex;
+  gap: 2rem;
+}
+
+.tab-container .page.contact .note {
+  flex: 1;
+}
+
+.tab-container .page.contact form {
+  display: flex;
+  gap: 0.5rem;
+  flex: 2;
+  flex-direction: column;
+}
+
+.tab-container .page.contact label {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid #fff;
+  align-items: flex-start;
+}
+
+.tab-container .page.contact label input,
+textarea {
+  color: #fff;
+  background: transparent;
+  font-size: 1.5rem;
+  border: none;
+  width: 100%;
+  height: 3rem;
+}
+
+textarea {
+  height: 5rem;
+}
+
+/* === Projects List === */
+.page.projects-list {
+  display: flex;
+  margin: 0;
+  padding: 0 0.5rem;
+  flex-direction: column;
+}
+
+.page.projects-list li {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.2s;
+}
+
+.page.projects-list li:hover {
+  color: gray;
+}
+
+.page.projects-list li .idx {
+  flex: 1;
+}
+
+.page.projects-list li .name {
+  flex: 4;
+}
+
+.page.projects-list li .date {
+  flex: 1;
+}
+
+@media (max-width: 900px) {
+  .projects-list {
+    width: 100%;
+  }
+}
+
+/* === Project Overlay === */
+.project-overlay {
+  z-index: 2;
+  position: absolute;
+  top: calc(130vh);
+  right: 0;
+  border-top-left-radius: 5px;
+  width: 70%;
+  height: calc(100% - 5rem);
+  opacity: 0;
+  color: #000;
+  background: #fff;
+  padding: 2rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  transform: translateZ(0) rotate(20deg);
+  transform-origin: bottom;
+  transition: 0.5s ease-in-out;
+}
+
+.project-overlay.open {
+  top: 6rem;
+  opacity: 1;
+  transform: translateZ(0) rotate(0deg);
+}
+
+.project-overlay::-webkit-scrollbar {
+  display: none;
+}
+
+.project-overlay img {
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-bottom: 4rem;
+}
+
+.project-overlay .header {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1rem;
+  list-style: none;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.project-overlay .header button {
+  cursor: pointer;
+  border: none;
+  color: red;
+  background: transparent;
+  font-size: 2rem;
+  opacity: 0.5;
+  text-transform: capitalize;
+}
+
+.project-overlay .header li:nth-child(1) {
+  flex: 3;
+}
+
+.project-overlay .header li:nth-child(2) {
+  flex: 2;
+}
+
+.project-overlay .details {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1rem;
+  justify-content: space-between;
+}
+
+.project-overlay .details .other {
+  flex: 3;
+}
+
+.project-overlay .details .other a {
+  color: #000;
+}
+
+.project-overlay .details .description {
+  flex: 2;
+}
+
+.project-overlay section p {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .project-overlay {
+    width: 100%;
+  }
+}

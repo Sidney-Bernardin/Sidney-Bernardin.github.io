@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sidney Bernardin | portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script src="projects.js" defer></script>
+    <script type="module" src="main.js" defer></script>
+</head>
+
+<body x-data="{ projects: projects, currentProject: null }">
+    <nav>
+        <h1>sidney bernardin</h1>
+        <a href="/assets/resume.pdf">resume</a>
+    </nav>
+
+    <footer>
+        <!-- Socials -->
+        <div class="socials">
+            <a href="https://github.com/Sidney-Bernardin">
+                <ion-icon name="logo-github"></ion-icon>
+            </a>
+            <a href="https://www.linkedin.com/in/sidney-bernardin-15410a23a/">
+                <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+            <p>sidney.bernardin@gmail.com</p>
+            <p>813-461-3785</p>
+        </div>
+    </footer>
+
+    <div class="hero">
+        <h1>Got an interesting project? I can help.</h1>
+    </div>
+
+    <!-- Tab Container -->
+    <div class="tab-container" x-data="{ currentTab: 'projects' }">
+        <!-- Tab Buttons -->
+        <div class="tab-btns" x-data="{ tabNames: ['projects', 'about me', 'contact'] }">
+            <template x-for="tabName in tabNames">
+                <button x-text="tabName" @click="currentTab = tabName"
+                    x-bind:class="currentTab === tabName ? 'active' : ''"></button>
+            </template>
+        </div>
+
+        <!-- Projects List -->
+        <template x-if="currentTab === 'projects'">
+            <ul class="page projects-list">
+                <template x-for="(project, idx) in projects">
+                    <li x-on:click="currentProject = currentProject ? null : project">
+                        <div class="idx" x-text="'0' + (idx + 1)"></div>
+                        <div class="name" x-text="project.name"></div>
+                        <div class="data" x-text="project.date"></div>
+                    </li>
+                </template>
+            </ul>
+        </template>
+
+        <!-- About Me -->
+        <template x-if="currentTab === 'about me'">
+            <p class="page about-me">
+                Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
+                enim labore culpa sint ad nisi Lorem pariatur mollit ex esse
+                exercitation amet. Nisi anim cupidatat excepteur officia.
+                Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate
+                voluptate dolor minim nulla est proident. Nostrud officia pariatur ut
+                officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
+                commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
+                Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis
+                officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis
+                sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea
+                consectetur et est culpa et culpa duis.
+            </p>
+        </template>
+
+        <!-- Contact Form -->
+        <template x-if="currentTab === 'contact'">
+            <div class="page contact">
+                <form>
+                    <label for="name">
+                        name:
+                        <input type="text" name="name" />
+                    </label>
+
+                    <label for="email">
+                        email:
+                        <input type="email" name="email" />
+                    </label>
+
+                    <label for="message">
+                        message:
+                        <textarea name="message"></textarea>
+                    </label>
+
+                    <input type="submit" value="send" />
+                </form>
+
+                <div class="note">
+                    <h3>Say hello! 👋</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, qui minim labore adipisicing minim
+                        sint cillum sint consectetur cupidatat.
+                    </p>
+                </div>
+            </div>
+        </template>
+    </div>
+
+    <!-- Project Overlay -->
+    <div class="project-overlay" x-bind:class="currentProject ? 'open' : ''">
+        <!-- Header -->
+        <ul class="header">
+            <li>
+                <h1 x-text="currentProject?.name"></h1>
+                <p x-text="currentProject?.type">Full-Stack Web-Development</p>
+            </li>
+            <li>
+                <button x-on:click="currentProject = null">
+                    <ion-icon name="close"></ion-icon>
+                    close
+                </button>
+            </li>
+        </ul>
+
+        <!-- Details -->
+        <div class="details">
+            <p class="other">
+                <a x-bind:href="currentProject?.github">
+                    <ion-icon name="logo-github"></ion-icon>
+                    source code
+                </a>
+            </p>
+            <p class="description" x-text="currentProject?.description"></p>
+        </div>
+
+        <!-- Thumbnail -->
+        <img src="/assets/go-live_room.png" />
+
+        <section>
+            <h2>Features</h2>
+            <p>
+                Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
+                enim labore culpa sint ad nisi Lorem pariatur mollit ex esse
+                exercitation amet. Nisi anim cupidatat excepteur officia.
+                Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate
+                voluptate dolor minim nulla est proident. Nostrud officia pariatur ut
+                officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
+                commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
+                Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis
+                officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis
+                sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea
+                consectetur et est culpa et culpa duis.
+            </p>
+
+            <h2>Features</h2>
+            <p>
+                Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
+                enim labore culpa sint ad nisi Lorem pariatur mollit ex esse
+                exercitation amet. Nisi anim cupidatat excepteur officia.
+                Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate
+                voluptate dolor minim nulla est proident. Nostrud officia pariatur ut
+                officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
+                commodo officia dolor Lorem duis laboris cupidatat officia voluptate.
+                Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis
+                officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis
+                sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea
+                consectetur et est culpa et culpa duis.
+            </p>
+        </section>
+    </div>
+</body>
+
+</html>
